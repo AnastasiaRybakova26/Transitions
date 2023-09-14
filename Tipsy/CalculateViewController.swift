@@ -146,6 +146,11 @@ class CalculateViewController: UIViewController {
         resultVS.peopleNumber = personNumber
 
         self.present(resultVS, animated: true)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+            self.billTextField.text = ""
+        })
+        
     }
 
     
